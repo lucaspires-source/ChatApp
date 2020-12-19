@@ -1,12 +1,18 @@
 import React, { useRef } from "react";
 import { Container, Form ,Button} from "react-bootstrap";
-import {v4 as uuidv4 } from 'uuid'
+import {v4 as uuidV4 } from 'uuid'
 const Login = ({onIdSubmit}) => {
   const idRef = useRef();
-    const handleSubmit = (e) =>{
+    
+  const handleSubmit = (e) =>{
       e.preventDefault()
       onIdSubmit(idRef.current.value)  
   }
+
+  const createNewId = () =>{
+     onIdSubmit(uuidV4())
+  }
+
   return (
     <Container
       className="align-items-center d-flex"
