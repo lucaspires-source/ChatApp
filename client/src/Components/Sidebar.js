@@ -19,7 +19,7 @@ const Sidebar = ({ id }) => {
       <Tab.Container activeKey={activeKey} onSelect={setActiveKey}>
         <Nav variant="tabs" className="justify-content-center">
           <Nav.Item>
-            <Nav.Link eventKey={CONVERSATIONS_KEY}>Coversations</Nav.Link>
+            <Nav.Link eventKey={CONVERSATIONS_KEY}>Conversations</Nav.Link>
           </Nav.Item>
           <Nav.Item>
             <Nav.Link eventKey={CONTACTS_KEY}>Contacts</Nav.Link>
