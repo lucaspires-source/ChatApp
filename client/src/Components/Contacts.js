@@ -1,6 +1,6 @@
 import React from 'react'
-import { useContacts } from '../contexts/ContactsProvider'
-import {ListGroup} from 'react-bootstrap'
+import { useContacts } from '../contexts/ContactsProvider';
+import {ListGroup} from 'react-bootstrap';
 const Contacts = () => {
     const {contacts} = useContacts()
     
