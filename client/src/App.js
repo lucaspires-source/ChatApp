@@ -4,14 +4,17 @@ import Login from './Components/Login';
 import useLocalStorage from './hooks/useLocalStorage';
 import {ContactsProvider} from './contexts/ContactsProvider'
 import{ConversationsProvider} from './contexts/ConversationsProvider'
+import { SocketProvider } from '../contexts/SocketProvider';
 const App = () => {
   const [id,setId] = useLocalStorage('id')
   const dashboard = (
-    <ContactsProvider>
-      <ConversationsProvider id={id}>
-        <Dashboard id={id} />
-      </ConversationsProvider>  
-    </ContactsProvider>
+    <SocketProvider>
+      <ContactsProvider>
+        <ConversationsProvider id={id}>
+          <Dashboard id={id} />
+        </ConversationsProvider>  
+      </ContactsProvider>
+    </SocketProvider>
   )
   return (
   <> 
